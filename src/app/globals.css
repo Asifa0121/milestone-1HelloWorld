@@ -2,20 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.parentContainer {
+
+background-image: url(/world.jpeg);
+background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: grid;
+  overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+@media only screen and (max-width:500px) {
+  .parentContainer {
+
+    background-image: url(/world.jpeg);
+    background-size: cover;
+      background-position: center;
+      height: 100vh;
+      overflow: hidden;
+      padding: 2px;
+      
+    }
+}
+
+
+.childContainer{
+  font-size: 70px;
+  font-family: fantasy;  
+  text-align: center;
+  padding: 20%;
+  color: rgb(150, 219, 221);
+  text-decoration:  rgb(65, 116, 117) underline; 
+  justify-content: center;
+
+}
+
+@media only screen and(max-width:500px){
+  .childContainer{
+margin-left: 20px;
+padding: 0px;
+text-align: center;
+
+   
   }
-}
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
 }
